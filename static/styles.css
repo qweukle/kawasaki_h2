@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #1d1d1d;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 128, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://via.placeholder.com/1920x1080") no-repeat center center / cover;
+    animation: zoom 15s infinite;
+}
+
+.overlay {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 2s forwards 1s; /* Задержка 1 секунда */
+}
+
+.overlay h2 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.features {
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 1.5s;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+@keyframes zoom {
+    0% { background-size: 120%; }
+    100% { background-size: 100%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
